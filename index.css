@@ -3,6 +3,7 @@
 * {
     margin: 0px;
     padding: 0px;
+    box-sizing: border-box;
 }
 
 .container {
@@ -27,7 +28,6 @@ h2 {
 
 h1 {
     width: 336px;
-    height: 96px;
     color: var(--Text_Dark, #391400);
     font-feature-settings: 'clig' off, 'liga' off;
     font-family: Epilogue;
@@ -38,6 +38,7 @@ h1 {
 }
 
 .circle {
+    margin-bottom: 10px;
     background-color: #EF6D58;
     width: 80px;
     height: 80px;
@@ -45,7 +46,6 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 48px 0 0 48px;
 }
 
 li {
@@ -53,9 +53,8 @@ li {
     border-radius: 6px 0px 0px 6px;
     border: 1px solid #F3D1BF;
     margin-top: 35px;
-    margin-bottom: 128px;
     width: 391px;
-    height: 400px;
+    padding: 48px;
 }
 
 ul {
@@ -63,9 +62,10 @@ ul {
 }
 
 h3 {
+    margin-bottom: 10px;
+
     color: var(--Text_Dark, #391400);
     font-feature-settings: 'clig' off, 'liga' off;
-    margin: 41px 0 19px 48px;
     font-family: Epilogue;
     font-size: 24px;
     font-style: normal;
@@ -74,9 +74,10 @@ h3 {
 }
 
 p {
+    margin-bottom: 10px;
+
     color: var(--Text_Dark_Gray, rgba(57, 20, 0, 0.64));
     font-feature-settings: 'clig' off, 'liga' off;
-    margin-left: 48px;
     font-family: Epilogue;
     font-size: 16px;
     font-style: normal;
@@ -84,8 +85,7 @@ p {
     line-height: 32px;
 }
 
-h4 {
-    margin: 26px 0px 52px 48px;
+a {
     color: var(--Text_Dark, #391400);
     font-feature-settings: 'clig' off, 'liga' off;
     font-family: Epilogue;
@@ -93,4 +93,43 @@ h4 {
     font-style: normal;
     font-weight: 400;
     line-height: 32px;
+    text-decoration: none;
+}
+
+
+/* mobil style */
+
+@media screen and (max-width:768px) {
+  .container{
+    padding: 124px 16px 114px 23px;
+
+  }  
+  h2{
+    margin-bottom: 17px;
+  }
+  h1{
+    width: 100%;
+
+  }
+  .circle{
+    margin-bottom: 41px;
+  }
+  li{
+    margin-top: 0px ;
+    width: 100%;
+   padding: 20px;
+   border-radius: 6px 6px 0px 0px;
+border: 1px solid #F3D1BF;
+  }
+  ul{
+    flex-direction: column;
+  }
+  h3{
+    margin-bottom: 19px;
+  }
+  p{
+    margin-bottom: 16px;
+    width: 100%;
+  }
+ 
 }
